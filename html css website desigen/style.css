@@ -1,0 +1,467 @@
+*{
+    box-sizing: border-box;
+}
+
+
+/* header is start now  */
+.header{
+    background-color: rgb(25, 81, 25);
+    text-align: center;
+    border-radius: 5px;
+    padding: 0 0px;
+}
+img{
+    height: 130px;
+    width: 130px;
+
+}
+h1{
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    margin-top: 20px;
+    
+}
+.header a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: rgb(38, 111, 38);
+    padding: 10px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    
+}
+.nav-bar a:hover{
+    background-color: gray;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+    
+}
+[class*="col-"]{
+    float: left;
+    width: 100%;
+    
+}
+.header::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+/* header is end now  */
+
+/* body part-1 is start now */
+    .body-div{
+        padding: 110px 10px;
+        text-align: center;
+        position: relative;
+    }
+    .body-div .image-1{
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        transition: transform 2s;
+    }
+    .body-div .image-1:hover{
+        transform: rotate(360deg);
+    }
+    .enter-body-div-2 h2{
+        font-size: 70px;
+        transition: transform 2s;
+        font-family: 'Dancing Script', cursive;
+    }
+    
+    .body-div p{
+        color: gray;
+        margin-bottom: 20px;
+    }
+    .body-div .image-2{
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 30px;
+        bottom: 20px; 
+        transition: transform 2s;
+    }
+    .body-div .image-2:hover{
+        transform: rotate(360deg);
+    }
+    .body-div::after{
+        content: '';
+        clear: both;
+        display: table;
+    }
+/* body part-1 is End now */
+
+    /* About Me start Here */
+     
+    .about-me{
+        background-color: rgb(110, 153, 166);
+        text-align: center;
+    }
+    .about-me h3{
+        font-size: 1.5rem;
+        padding: 25px 0 0 0; 
+        color: white;
+    }
+    .horezental-hr{
+        border: dotted 7px white;
+        border-bottom: none;
+        width: 70px;
+    }
+    .about-me-image img{
+        border-radius: 50%;
+        border: 3px solid rgb(158, 143, 143);
+        height: 160px;
+        width: 160px;
+    }
+    .about-des p{
+        color: white;
+        text-align: left;
+    }
+    .button-cv{
+        background-color: rgb(27, 67, 27);
+        color: white;
+        border: none;
+        padding: 8px;
+        font-size: 1rem;
+        margin: 4px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .button-cv:hover{
+        background-color: rgb(53, 109, 53);
+    }
+
+    .about-me{
+        content: '';
+        clear: both;
+        display: table;
+    }
+
+    /* About Me End Here */
+
+    /* make card and starts here */
+    
+    .main-div1{
+        padding: 1% 0%;
+        
+
+    }
+    
+    .main-div1 .card{
+        background-color: rgb(188, 185, 185);
+        border-radius: 10px;
+        transition: 0.3s;
+        padding: 10px;
+        height: 700px;
+        
+    }
+    .main-div1 .card:hover{
+        box-shadow: 0px 0px 10px 5px;
+    }
+    .logo-div{
+        text-align: center;
+        padding-top: 30px;
+    }
+    .logo-div img{
+        height: 100px;
+        width: 100px;
+        border: 3px solid rgb(118, 87, 87);
+        border-radius: 50%;
+        padding: 4px;
+    }
+    .header-div{
+        background-color: rgb(99, 98, 98);
+        margin: 0 15px;
+        border-radius: 10px;
+    }
+    .header-div h2{
+        text-align: center;
+        padding: 10px;
+        color: white;   
+    }
+/* Skill progra bar */
+    .skill-div{
+        padding-right: 45px;
+    }
+    .skill-div ul{
+        list-style-type: none;
+        font-size: 1.2rem;
+        
+    }
+    .skill-div li{
+        font-weight: bold;
+        margin: 27px;
+        left: 0;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .skill-div li::before{
+        content: '';
+        position: absolute;
+        background-color: rgb(133, 124, 207);
+        height: 10px;
+        width: 100%;
+        top: calc(100% + 5px);
+        border-radius: 1000px;
+        left: 0;
+    }
+    .skill-div li::after{
+        content: '';
+        position: absolute;
+        background-color: rgb(96, 86, 174);
+        height: 10px;
+        width: 0;
+        top: calc(100% + 5px);
+        border-radius: 1000px;
+        left: 0;
+
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: 5;
+        animation-fill-mode: forwards;
+    }
+    .skill-div li.html::after{
+        animation-name: html;
+
+    }
+    @keyframes html {
+        to{
+            width: 90%;
+        }
+        
+    }
+    .skill-div li.css::after{
+        animation-name: css;
+
+    }
+    @keyframes css {
+        to{
+            width: 70%;
+        }
+        
+    }
+    .skill-div li.bootstrap::after{
+        animation-name: bootstrap;
+
+    }
+    @keyframes bootstrap {
+        to{
+            width: 40%;
+        }
+        
+    }
+    .skill-div li.javascript::after{
+        animation-name: javascript;
+
+    }
+    @keyframes javascript {
+        to{
+            width: 60%;
+        }
+        
+    }
+    .skill-div li.jquery::after{
+        animation-name: jquery;
+
+    }
+    @keyframes jquery {
+        to{
+            width: 10%;
+        }
+        
+    }
+    .skill-div li.nodejs::after{
+        animation-name: nodejs;
+
+    }
+    @keyframes nodejs {
+        to{
+            width: 30%;
+        }
+        
+    }
+    .skill-div li.expressjs::after{
+        animation-name: expressjs;
+
+    }
+    @keyframes expressjs {
+        to{
+            width: 5%;
+        }
+        
+    }
+    .skill-div li.github::after{
+        animation-name: github;
+
+    }
+    @keyframes github {
+        to{
+            width: 80%;
+        }
+        
+    }
+    .skill-div li.reactjs::after{
+        animation-name: reactjs;
+
+    }
+    @keyframes reactjs {
+        to{
+            width: 20%;
+        }
+        
+    }
+
+
+
+
+    .main-div1::after{
+        content: '';
+        clear: both;
+        display: table;
+    }
+
+    /* make card and Ends here */
+
+
+    /* achivements-contact Start here */
+
+    .main-div3{
+        padding: 1% 0%;
+        background-color: rgb(85, 128, 114);
+    }
+    
+    .achivements h2{
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 40px;
+
+    }
+    .achivements{
+        padding: 1% 7%;
+    }
+    .achivements p{
+        color: white;
+    }
+    .contact{
+        text-align: center;
+        
+    }
+    .contact h2{
+        color: white;
+    }
+    .contact input, textarea{
+        width: 100%;
+        text-align: center;
+        border: none;
+        resize: none;
+        border-radius: 5px;
+    }
+    .contact .hello{
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(31, 88, 31);
+        color: white;
+        font-size: 1.2rem;
+        padding: 5px;
+        width: 80px;
+        
+        margin: 10px;
+        
+    }
+
+    .contact .hello:hover{
+        background-color: gray;
+    }
+    
+/* contact-link */
+.contact-link .btn{
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 5px;
+    margin: 9px;
+    margin-top: 20px;
+    width: 40px;
+}
+.contact-link .btn:hover{
+    background-color: rgb(121, 107, 107);
+}
+
+.contact-link h2{
+    color: white;
+}
+.contact-link{
+    text-align: center;
+    position: relative;
+}
+   
+
+
+    
+    .main-div3::after{
+        content: '';
+        clear: both;
+        display: table;
+    }
+    /* achivements-contact Ends here */
+
+
+
+    /* footer is Start here */
+    .footer-main{
+        background-color: black;
+    }
+    .footer-nav{
+        text-align: center;
+        padding: 30px;
+        padding-bottom: 0;
+    }
+    .footer-nav a{
+        text-decoration: none;
+        display: block;
+        color: white;
+        font-size: 20px;
+        margin:10px 150px;
+        font-weight: 100;
+        padding: 2px;
+        
+        
+
+    } 
+    .footer-nav a:hover{
+        color: gray;
+        text-decoration: initial;
+    } 
+    .footer-des{
+        
+    }
+    .footer-des p{
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    .love{
+        color: red;
+        font-size: 30px;
+    }
+    .footer-main::after{
+        content: '';
+        clear: both;
+        display: table;
+    }
+
+
+    /* footer is Ends here */
